@@ -15,13 +15,18 @@
   "type": "commonjs",
   "main": "index.html",
   "scripts": {
-    "lint": "npm run lint:html && npm run lint:css && npm run format:check",
+    "lint": "npm run lint:html && npm run lint:css && npm run lint:js && npm run format:check",
     "lint:html": "html-validate index.html",
     "lint:css": "stylelint index.html",
+    "lint:js": "eslint index.html",
     "format:check": "prettier --check index.html",
     "format": "prettier --write index.html"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.5.0",
+    "eslint-plugin-html": "^8.1.4",
+    "globals": "^17.6.0",
     "html-validate": "^11.5.3",
     "postcss-html": "^1.8.1",
     "prettier": "^3.8.4",

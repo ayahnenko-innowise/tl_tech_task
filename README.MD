@@ -15,7 +15,11 @@ Features:
 Open `index.html` in your browser.
 
 ## For developers
+
+### Use git hooks
 Before making a commit, enable useful git hooks:
 `git config core.hooksPath .githooks`
-
 So far, only `commit-msg` is used.
+
+### Check your code
+Run `npm run lint` to verify your code.
